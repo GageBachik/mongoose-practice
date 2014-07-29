@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 Change Email:
+	p your email: #{user.email}
+	form(method='post' action='/edited')
+		input(type='text' name='email' placeholder='Email')
+		input(type='text' value='#{user.email}', hidden='true' name='oldEmail')
+		input(type='submit' value='submit new email')
